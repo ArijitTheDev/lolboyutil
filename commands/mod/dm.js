@@ -8,7 +8,7 @@ module.exports = {
     },
     run: async (bot, message, args) => {
         
-        if(!message.channel.permissionsFor(message.member).has("MANAGE_MESSAGES") && !ownerID.includes(message.author.id)) return;
+        if(!message.channel.permissionsFor(message.member).has("ADMINISTRATION") && !ownerID.includes(message.author.id)) return;
 
 
       let user =
