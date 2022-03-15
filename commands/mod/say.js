@@ -6,7 +6,7 @@ const ee = require("../../embed.json");
 
 const {ownerID} = require ("../../owner.json");
 
-module.exports = {
+/*module.exports = {
 
     name: "say",
 
@@ -18,7 +18,7 @@ module.exports = {
 
     usage: "say <TEXT>",
 
-    description: "Resends your Text",
+    description: "Resends your Text",*/
 
     run: async (client, message, args, user, text, prefix) => {
 
