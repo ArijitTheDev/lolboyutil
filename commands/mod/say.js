@@ -6,7 +6,7 @@ client.on('message', message => {
 
         message.delete()
 
-        const SayMessage = message.content.slice(2).trim();
+        const SayMessage = message.content.slice(4).trim();
 
         message.channel.send(SayMessage)
 
