@@ -14,7 +14,7 @@ module.exports = {
         .setTitle("Reload")
         .setDescription("Sorry, the `reload` command can only be executed by the Developer.")
         .setColor("#cdf785");
-        if(message.author.id !== '684092617272721420') return message.channel.send(embed);
+        if(message.author.id !== '842620032960823327') return message.channel.send(embed);
 
         if(!args[0].toLowerCase()) return message.channel.send("Please provide a command name!")
 
