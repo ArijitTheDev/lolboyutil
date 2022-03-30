@@ -1,5 +1,5 @@
 const { ownerID } = require('../../owner.json') 
-const { mEmbed } = require('discord.js')
+const { messageEmbed } = require('discord.js')
 const whitelist = require('../../whitelist.json')
 
 module.exports = {
@@ -63,10 +63,12 @@ let user =
         else{
 
         //message.reply("You're Not Whitelisted")
-        let something = new mEmbed()
+       message.channel.send(new messageEmbed()
          .setTitle("No Access")
          .setDescription("You're Not Whitelisted To Use This Command")
-         message.channel.send(something)           
+         .setFooter("Made With 🤍 by Arijit#1000") )
+       //message.channel.send(something)
+          
 }
 
     },
