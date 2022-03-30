@@ -1,3 +1,4 @@
+const whitelist = require('../../whitelist.json')
 module.exports = {
       config: {
            name: "say",
