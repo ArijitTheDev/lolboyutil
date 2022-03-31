@@ -1,12 +1,21 @@
+const Discord = require('discord.js');
 module.exports = {
-    config: {
-        name: "say",
-        aliases: ["s", "bol"],
-        description: "Says the Message",
-        usage: "say <msg>",
-    },
+name:'say',
+alias:[],
+execute: (client, message, args) => {
+  
+  let texto = args.join(' ')
+      if(!texto){
+        const embed = new Discord.MessageEmbed()
+        .setTitle('Error')
+        .setDescription(`<:_x_:880490001354346506> ${message.author} debes decir algo <:_x_:880490001354346506>`)
+        .setColor("RANDOM")
+       return message.channel.send(embed).then(msg => msg.delete({timeout: 5000}))
+      }
+  
+    message.delete();
+message.channel.send(texto)
 
-	let txt1 = args.join(' ')
-	message.delete();
-	message.channel.send(txt1);
+}
+
 }
