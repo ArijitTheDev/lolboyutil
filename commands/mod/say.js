@@ -12,7 +12,7 @@ if (whitelist.id.includes(message.author.id)){
       if(!texto){
         const embed = new Discord.MessageEmbed()
         .setTitle('Error')
-        .setDescription(`<:_x_:880490001354346506> ${message.author} debes decir algo <:_x_:880490001354346506>`)
+        .setDescription(`Hello ${message.author}, please enter a message to send`)
         .setColor("RANDOM")
        return message.channel.send(embed).then(msg => msg.delete({timeout: 5000}))
       }
