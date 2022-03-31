@@ -6,7 +6,7 @@ module.exports = {
         usage: "say <msg>",
     },
 
-	let text = args.join(' ');
+	let text = args.join(' ')
 	message.delete();
 	message.channel.send(text);
 }
