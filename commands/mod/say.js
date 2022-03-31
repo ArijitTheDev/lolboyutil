@@ -1,7 +1,9 @@
 const Discord = require('discord.js');
 module.exports = {
+config: {
 name:'say',
 alias:[],
+},
 execute: (client, message, args) => {
   
   let texto = args.join(' ')
