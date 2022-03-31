@@ -4,7 +4,7 @@ config: {
 name:'say',
 description: 'Say any message'
 },
-execute: (client, message, args) => {
+run: async (client, message, args) => {
   
   let texto = args.join(' ')
       if(!texto){
