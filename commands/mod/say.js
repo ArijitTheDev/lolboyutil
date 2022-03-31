@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 module.exports = {
 config: {
-name:'say',
-description: 'Say any message'
+name:'say'
 },
 run: async (client, message, args) => {
   
