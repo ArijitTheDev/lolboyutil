@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 module.exports = {
 config: {
 name:'say',
-alias:[],
+description: 'Say any message'
 },
 execute: (client, message, args) => {
   
