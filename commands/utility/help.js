@@ -68,7 +68,7 @@ let pages = [pageN1, pageN2, pageN3, pageN4]
                 if (page === 1) return r.users.remove(r.users.cache.filter(u => u === message.author).first())
                 page--
                 embed.setDescription(pages[page-1])
-                embed.setFooter(`Page ${page} of ${pages.length}`, bot.user.displayAvatarURL())
+                embed.setFooter(`Page ${page} of ${pages.length}| Made With 🤍 by Arijit#1000`, bot.user.displayAvatarURL())
                 msg.edit(embed)
                 r.users.remove(r.users.cache.filter(u => u === message.author).first())
             })
@@ -77,7 +77,7 @@ let pages = [pageN1, pageN2, pageN3, pageN4]
                 if (page === pages.length) return r.users.remove(r.users.cache.filter(u => u === message.author).first())
                 page++
                 embed.setDescription(pages[page-1])
-                embed.setFooter(`Page ${page} of ${pages.length}`, bot.user.displayAvatarURL())
+                embed.setFooter(`Page ${page} of ${pages.length}| Made With 🤍 by Arijit#1000`, bot.user.displayAvatarURL())
                 msg.edit(embed)
                 r.users.remove(r.users.cache.filter(u => u === message.author).first())
             })
