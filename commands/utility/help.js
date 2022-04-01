@@ -30,8 +30,8 @@ if(message.content.toLowerCase() === `${prefix}help`){
     var log = new Discord.MessageEmbed()
     .setTitle("**Help Menu: Main**")
     .setColor(`#d9d9d9`)
-    .addField(`**👑Moderation**`, `[ \`${prefix}help mod\` ]`, true)
-    .addField(`**⚙️Utility**`, `[ \`${prefix}help utility\` ]`, true)
+    .addField(`**Moderation**`, `[ \`${prefix}help mod\` ]`, true)
+    .addField(`**Utility**`, `[ \`${prefix}help utility\` ]`, true)
 
 message.channel.send(log);
 } 
@@ -39,14 +39,14 @@ else if(args[0].toLowerCase() === "mod") {
     var commandArray = "1) Ban \n2) Kick\n3) Whois\n4) Unban\n5) Warn\n6) Mute\n7) Purge\n8) Slowmode \n9) Nick \n10) Roleinfo"
     var commandA2 = "11) Rolememberinfo\n12) Setmodlog\n13) Disablemodlog\n14) Lock (Lock the channel)\n15) Unlock (Unlock the channel)\n16) Lockdown (Fully Lock the whole server. [FOR EMRGENCIES ONLY]) \n17) Hackban\\forceban <id>"
     
-    pageN1 = "**\n💠Commands: **\n`\`\`js\n" + commandArray + "\`\`\`";
-    pageN2 = "**\n💠Commands: **\n`\`\`js\n" + commandA2 + "\`\`\`";
+    pageN1 = "**\nCommands: **\n`\`\`js\n" + commandArray + "\`\`\`";
+    pageN2 = "**\nCommands: **\n`\`\`js\n" + commandA2 + "\`\`\`";
     
     let pages = [pageN1, pageN2]
     let page = 1 
 
     var embed = new Discord.MessageEmbed()
-        .setTitle('**Help Menu: [Moderation]👑**')
+        .setTitle('**Help Menu: [Moderation]**')
         .setColor("#d9d9d9") // Set the color
         .setFooter(`Page ${page} of ${pages.length}`, bot.user.displayAvatarURL())
         .setDescription(pages[page-1])
