@@ -19,7 +19,7 @@ if (whitelist.id.includes(message.author.id)){
   const emsg = new Discord.MessageEmbed()
   .setTitle('Aurous')
   .setDescription(texto)
-  .setFooter('Made With 🤍 by Arijit#1000')
+  .setFooter('Aurous | Made With 🤍 by Arijit#1000')
 
 message.channel.send(emsg)
 message.delete();
