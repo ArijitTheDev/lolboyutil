@@ -36,13 +36,15 @@ if(message.content.toLowerCase() === `${prefix}help`){
 message.channel.send(log);
 } 
 else if(args[0].toLowerCase() === "mod") {
-    var commandArray = "1) Ban \n2) Unban\n3) Kick\n4) Mute\n5) Unmute\n6) Warn\n7) Purge\n8) Slowmode \n9) Nick \n10) Setmuterole"
+    var commandArray = "1) Ban \n2) Unban\n3) Kick\n4) Mute\n5) Unmute\n6) Warn\n7) Purge\n8) Slowmode \n9) Nick (Needs Access)\n10) Setmuterole"
     var commandA2 = "11) Disablemuterole\n12) Setmodlog\n13) Disablemodlog\n14) Lock (Lock the channel)\n15) Unlock (Unlock the channel)\n16) Lockdown (Fully Lock the whole server. [FOR EMRGENCIES ONLY]) \n17) Hackban\\forceban <id> \n18) Setxp"
-    var commandA3 = "19) Disablexp\n20) Dm (Needs Access)\n21) Say (Needs Access)\n22) Embed(Needs Access)\n23) Role (Needs Access)\n24) Rdel - Remove a role(Needs Access)"
+    var commandA3 = "19) Disablexp\n20) Dm (Needs Access)\n21) Say (Needs Access)\n22) Embed(Needs Access)\n23) Role (Needs Access)\n24) Rdel - Remove a role(Needs Access)\n25) Svr - Set Server Region"
+    var commandA4 = "26) Deafen\n27) Undefean\n28) Rolememberinfo\n29) Voicemove\n30) Roleinfo\n31) Whois"
     pageN1 = "**\nCommands: **\n`\`\`js\n" + commandArray + "\`\`\`";
     pageN2 = "**\nCommands: **\n`\`\`js\n" + commandA2 + "\`\`\`";
     pageN3 = "**\nCommands: **\n`\`\`js\n" + commandA3 + "\`\`\`";
-    let pages = [pageN1, pageN2, pageN3]
+    pageN4 = "**\nCommands: **\n`\`\`js\n" + commandA4 + "\`\`\`";
+let pages = [pageN1, pageN2, pageN3, pageN4]
     let page = 1 
 
     var embed = new Discord.MessageEmbed()
