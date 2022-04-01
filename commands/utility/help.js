@@ -50,7 +50,7 @@ let pages = [pageN1, pageN2, pageN3, pageN4]
     var embed = new Discord.MessageEmbed()
         .setTitle('**Help Menu: [Moderation]**')
         .setColor("#d9d9d9") // Set the color
-        .setFooter(`Page ${page} of ${pages.length}`, bot.user.displayAvatarURL())
+        .setFooter(`Page ${page} of ${pages.length} | Made With 🤍 by Arijit#1000`, bot.user.displayAvatarURL())
         .setDescription(pages[page-1])
 
         message.channel.send({embed}).then(msg => {
