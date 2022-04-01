@@ -20,8 +20,9 @@ if (whitelist.id.includes(message.author.id)){
   .setTitle('Aurous')
   .setDescription(texto)
   .setFooter('Made With 🤍 by Arijit#1000')
-    message.delete();
+
 message.channel.send(emsg)
+message.delete();
 }
 
 }
