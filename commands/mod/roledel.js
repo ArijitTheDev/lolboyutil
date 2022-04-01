@@ -1,14 +1,16 @@
 const { MessageEmbed } = require("discord.js");
+const rolewhitelist = require("../../rolewhitelist.json");
 module.exports = {
   config: {
     name: "roledel",
     description: "Remove a role from a member",
     usage: "m/roledel <member mention/member id> <role mention/role id>",
-    aliases: ['role del', 'role delete', 'rdel']
+    aliases: ['role del', 'role delete', 'rdel', 'rremove']
   },
   run: async (bot, message, args) => {
 
-    if(!message.member.hasPermission(["MANAGE_ROLES"])) return message.channel.send("You dont have permission to perform this command!")
+    if(rolewhitelist.id.includes(message.author.id))
+{
 
     let rMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 
@@ -19,7 +21,7 @@ module.exports = {
     if(!role) return message.channel.send("Please provide a role to remove from said user.") 
     
 
-    if(!message.guild.me.hasPermission(["MANAGE_ROLES"])) return message.channel.send("I don't have permission to perform this command. Please give me Manage Roles Permission!")
+   
 
     if(!rMember.roles.cache.has(role.id)) {
       let rolDEL_err = new MessageEmbed()
@@ -39,6 +41,7 @@ module.exports = {
       message.channel.send(rolDEL)
     
     }
+}
 
   },
 };
