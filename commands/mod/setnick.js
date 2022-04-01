@@ -1,5 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const db = require('quick.db');
+const nickwhitelist = require('../../nickwhitelist.json');
 
 module.exports = {
     config: {
@@ -10,7 +11,8 @@ module.exports = {
         usage: "[mention | name | nickname | ID] <nickname>",
     },
     run: async (bot, message, args) => {
-        if (!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send("**You Dont Have Permissions To Change Nickname! - [MANAGE_GUILD]**");
+        if (nickwhitelist.id.includes(message.author.id))
+{
 
         if (!message.guild.me.hasPermission("CHANGE_NICKNAME")) return message.channel.send("**I Dont Have Permissions To Change Nickname! - [CHANGE_NICKNAME]**");
       
@@ -54,4 +56,5 @@ module.exports = {
             if (!sChannel) return;
             sChannel.send(sembed)
     }
+}
 }
