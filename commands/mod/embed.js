@@ -2,7 +2,10 @@ const Discord = require('discord.js');
 const whitelist =require('../../whitelist.json');
 module.exports = {
 config: {
-name:'embed'
+name:'embed',
+aliases: ["esay"],
+description: "Use this to send embedded messages",
+usage: "-embed <message>"
 },
 run: async (client, message, args) => {
 
