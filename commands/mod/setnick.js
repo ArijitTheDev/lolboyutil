@@ -14,7 +14,7 @@ module.exports = {
         if (nickwhitelist.id.includes(message.author.id))
 {
 
-        if (!message.guild.me.hasPermission("CHANGE_NICKNAME")) return message.channel.send("**I Dont Have Permissions To Change Nickname! - [CHANGE_NICKNAME]**");
+       
       
         if (!args[0]) return message.channel.send("**Please Enter A User!**")
       
