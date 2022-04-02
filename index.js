@@ -1,6 +1,6 @@
 //====================================================================================CONSTANTS REQUIRED ON READY=============================================================================================
 const { Client, Collection } = require('discord.js');
-const { PREFIX, TOKEN } = require('./config');
+const { PREFIX } = require('./config');
 const bot = new Client({ disableMentions: 'everyone' });
 const fs = require("fs");
 const db = require('quick.db');
@@ -60,4 +60,4 @@ bot.on('message', async message => {
 //============================================================================================================================================================================================================
 
 
-bot.login(TOKEN);
+bot.login(process.env.Token);
