@@ -23,7 +23,7 @@ module.exports = {
             if (kickMember.id === message.member.id) return message.channel.send("**You Cannot Kick Yourself!**")
 
             if (!kickMember.kickable) return message.channel.send("**Cannot Kick This User!**")
-            if (kickMember.user.bot) return message.channel.send("**Cannot Kick A Bot!**")
+            //if (kickMember.user.bot) return message.channel.send("**Cannot Kick A Bot!**")
 
             var reason = args.slice(1).join(" ");
             try {
